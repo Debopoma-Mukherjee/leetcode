@@ -5,8 +5,6 @@ public:
         int n=nums.size();
         int even=0;
         int odd=1;
-        int wrongeven=-1;
-        int wrongodd=-1;
         while(even<n && odd<n)
         {
             while(even<n && nums[even]%2==0)
