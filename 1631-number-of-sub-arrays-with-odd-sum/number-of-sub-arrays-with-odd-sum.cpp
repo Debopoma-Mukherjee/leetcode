@@ -28,12 +28,12 @@ public:
         sum += arr[i];
         if (sum % 2 != 0)
         {
-            cnt = (cnt + dp[0]) % (1000000007); 
+            cnt = (cnt + dp[0]) % (1000000007); //oddsum=newoddsum+prevevensum;
             dp[1]++; 
         } else
         {
             cnt = (cnt + dp[1]) % (1000000007); 
-            dp[0]++; 
+            dp[0]++; //oddsum=newevensum+allprevoddsum
         }
         oddSumSubArrays(arr, i + 1, n, sum, cnt, dp);
     }
@@ -42,7 +42,7 @@ public:
         int n = arr.size();
         int cnt = 0;
         unordered_map<int, int> dp;
-        dp[0] = 1; 
+        dp[0] = 1; //initial sum 0 (even)
         oddSumSubArrays(arr, 0, n, 0, cnt, dp);
         return cnt;
     }
