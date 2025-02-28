@@ -4,7 +4,7 @@ public:
         sort(beans.begin(),beans.end());
         long long n=beans.size();
         long long total=0;
-        long long minm=99999999999999;
+        long long minm=LONG_MAX;
         for(int i=0;i<n;i++)
         {
             total=total+beans[i];
