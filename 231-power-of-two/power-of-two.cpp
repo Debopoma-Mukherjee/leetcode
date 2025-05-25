@@ -10,6 +10,9 @@ public:
             return false;
         return isPowerOfTwo(n/2);
     }*/
+    
+    /*
+    if a number is divisible by 2 then its log base 2 will be an integer number so floor and ceil of  log2(n) will be the same integer number.*/
     bool isPowerOfTwo(int n) 
     {
        if(n==0)
