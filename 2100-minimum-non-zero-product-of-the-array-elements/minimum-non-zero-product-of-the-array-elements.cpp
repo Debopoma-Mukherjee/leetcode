@@ -43,7 +43,7 @@ public:
     }
 
     int minNonZeroProduct(int p) {
-        long long last_value =(long long) pow(2,p)- 1; // 2^p - 1 (not modded!)
+        long long last_value =(long long) pow(2,p)- 1;
         long long product = binary_exponentiation(last_value - 1, last_value / 2);
         long long ans = (product * (last_value % mod)) % mod;
         return ans;
