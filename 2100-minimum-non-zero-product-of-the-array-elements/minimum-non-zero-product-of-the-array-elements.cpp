@@ -4,7 +4,7 @@ public:
     {
         long long ans=1;
         int mod=1e9+7;
-        x %= mod;
+        x=x%mod;
         while(n>0)
         {
             if(n%2==0)
